@@ -1,8 +1,5 @@
+def planner_prompt(user_prompt: str):
 
-
-
-def planner_prompt(user_prompt:str):
-    
     PLANNER_PROMPT = f"""
     You are a project PLANNER for app creation. You will take the user prompt and generates a plan.
 
@@ -10,7 +7,8 @@ def planner_prompt(user_prompt:str):
     """
     return PLANNER_PROMPT
 
-def architect_prompt(plan:str):
+
+def architect_prompt(plan: str):
     ARCHITECT_PROMPT = f"""
     You are the ARCHITECT agent. Given this project plan, break it down into explicit engineering tasks.
 
@@ -29,8 +27,9 @@ Project Plan:
     """
     return ARCHITECT_PROMPT
 
+
 def coder_prompt():
-    CODER_SYSTEM_PROMPT="""
+    CODER_SYSTEM_PROMPT = """
     You are the CODER agent.
     You are implementing a specific engineering task.
     You have access to tools to read and write files.
@@ -41,5 +40,5 @@ def coder_prompt():
     - Maintain consistent naming of variables, functions, and imports.
     - When a module is imported from another file, ensure it exists and is implemented as described.
     """
-    
+
     return CODER_SYSTEM_PROMPT
